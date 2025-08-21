@@ -73,15 +73,15 @@ export default function Contact() {
           <div>
             <h3 className="text-2xl font-semibold text-gray-900 mb-6">Contact Information</h3>
             <div className="space-y-6">
-              <Card className="border-l-4 border-l-emerald-500">
+              <Card className="border-l-4 border-l-blue-500">
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-4">
-                    <Mail className="w-6 h-6 text-emerald-600" />
+                    <Mail className="w-6 h-6 text-blue-600" />
                     <div>
                       <h4 className="font-semibold text-gray-900">Email</h4>
                       <Link
                         href="mailto:zaki.ahmed@graduate.utm.my"
-                        className="text-gray-600 hover:text-emerald-600 transition-colors"
+                        className="text-gray-600 hover:text-blue-600 transition-colors"
                       >
                         zaki.ahmed@graduate.utm.my
                       </Link>
@@ -125,10 +125,10 @@ export default function Contact() {
                   href="https://www.linkedin.com/in/ahmed-zaki-al-gabaly-14aa19262/"
                   className="p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border"
                 >
-                  <Linkedin className="w-6 h-6 text-gray-600 hover:text-emerald-600 transition-colors" />
+                  <Linkedin className="w-6 h-6 text-gray-600 hover:text-blue-600 transition-colors" />
                 </Link>
                 <Link href="https://github.com/AhmedWritesCode" className="p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border">
-                  <Github className="w-6 h-6 text-gray-600 hover:text-emerald-600 transition-colors" />
+                  <Github className="w-6 h-6 text-gray-600 hover:text-blue-600 transition-colors" />
                 </Link>
               </div>
             </div>
@@ -198,7 +198,7 @@ export default function Contact() {
                 </div>
                 <Button 
                   type="submit" 
-                  className="w-full bg-emerald-600 hover:bg-emerald-700"
+                  className="w-full bg-blue-600 hover:bg-blue-700"
                   disabled={isLoading}
                 >
                   {isLoading ? (

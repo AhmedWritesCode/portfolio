@@ -51,7 +51,7 @@ export default function Projects() {
         {/* University Project Indicator */}
         {project.isUniversity && (
           <div className="absolute bottom-4 left-4">
-            <Badge className="bg-emerald-600 text-white">University Project</Badge>
+            <Badge className="bg-blue-600 text-white">University Project</Badge>
           </div>
         )}
       </div>
@@ -70,7 +70,7 @@ export default function Projects() {
             <ul className="text-sm text-gray-600 space-y-1">
               {project.features.map((feature, featureIndex) => (
                 <li key={featureIndex} className="flex items-start">
-                  <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full mt-2 mr-2 flex-shrink-0" />
+                  <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 mr-2 flex-shrink-0" />
                   {feature}
                 </li>
               ))}
@@ -94,7 +94,7 @@ export default function Projects() {
             {project.liveUrl && (
               <Button
                 size="sm"
-                className="bg-emerald-600 hover:bg-emerald-700"
+                className="bg-blue-600 hover:bg-blue-700"
                 asChild
                 onClick={() => trackProjectView(project.id, project.title)}
               >
@@ -144,7 +144,7 @@ export default function Projects() {
                 variant={selectedCategory === category ? "default" : "outline"}
                 size="sm"
                 onClick={() => setSelectedCategory(category)}
-                className={selectedCategory === category ? "bg-emerald-600 hover:bg-emerald-700" : ""}
+                className={selectedCategory === category ? "bg-blue-600 hover:bg-blue-700" : ""}
               >
                 {category}
               </Button>
@@ -170,7 +170,7 @@ export default function Projects() {
         <div className="mt-16 grid md:grid-cols-3 gap-6">
           <Card className="text-center">
             <CardContent className="p-6">
-              <div className="text-3xl font-bold text-emerald-600 mb-2">{projects.length}</div>
+              <div className="text-3xl font-bold text-blue-600 mb-2">{projects.length}</div>
               <p className="text-gray-600">Total Projects</p>
             </CardContent>
           </Card>

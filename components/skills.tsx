@@ -63,7 +63,7 @@ export default function Skills() {
                 {areasOfInterest.map((interest, index) => (
                   <div
                     key={index}
-                    className="p-4 bg-gradient-to-br from-emerald-50 to-teal-50 rounded-lg hover:shadow-md transition-shadow duration-200"
+                    className="p-4 bg-gradient-to-br from-blue-50 to-teal-50 rounded-lg hover:shadow-md transition-shadow duration-200"
                   >
                     <p className="font-medium text-gray-800 text-sm">{interest}</p>
                   </div>

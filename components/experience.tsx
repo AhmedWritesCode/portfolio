@@ -94,12 +94,12 @@ export default function Experience() {
                 <CardHeader>
                   <div className="flex items-start justify-between">
                     <div className="flex items-center space-x-3">
-                      <div className="p-2 bg-emerald-100 rounded-lg">
-                        <IconComponent className="w-6 h-6 text-emerald-600" />
+                      <div className="p-2 bg-blue-100 rounded-lg">
+                        <IconComponent className="w-6 h-6 text-blue-600" />
                       </div>
                       <div>
                         <CardTitle className="text-xl text-gray-900">{exp.title}</CardTitle>
-                        <p className="text-emerald-600 font-medium">{exp.organization}</p>
+                        <p className="text-blue-600 font-medium">{exp.organization}</p>
                       </div>
                     </div>
                     <Badge variant="outline" className="flex items-center space-x-1">
@@ -119,7 +119,7 @@ export default function Experience() {
                       <ul className="space-y-1">
                         {exp.achievements.map((achievement, achIndex) => (
                           <li key={achIndex} className="flex items-start text-sm text-gray-600">
-                            <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full mt-2 mr-2 flex-shrink-0" />
+                            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 mr-2 flex-shrink-0" />
                             {achievement}
                           </li>
                         ))}
@@ -132,7 +132,7 @@ export default function Experience() {
           })}
         </div>
 
-        <Card className="bg-gradient-to-br from-emerald-50 to-teal-50">
+        <Card className="bg-gradient-to-br from-blue-50 to-teal-50">
           <CardHeader>
             <CardTitle className="text-center text-gray-900">Professional Certifications & Training</CardTitle>
           </CardHeader>

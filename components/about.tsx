@@ -42,10 +42,10 @@ export default function About() {
             <h3 className="text-2xl font-semibold text-gray-900 mb-6">Education & Achievements</h3>
             <div className="space-y-6">
               {/* Education Card */}
-              <Card className="border-l-4 border-l-emerald-500">
+              <Card className="border-l-4 border-l-blue-500">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
-                    <GraduationCap className="w-6 h-6 text-emerald-600 mt-1" />
+                    <GraduationCap className="w-6 h-6 text-blue-600 mt-1" />
                     <div>
                       <h4 className="font-semibold text-gray-900">{personalInfo.degree}</h4>
                       <p className="text-gray-600">{personalInfo.university}</p>

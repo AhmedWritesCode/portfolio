@@ -48,7 +48,7 @@ export default class ErrorBoundary extends Component<Props, State> {
               <p className="text-gray-600">
                 We're sorry, but something unexpected happened. Please try refreshing the page.
               </p>
-              <Button onClick={() => window.location.reload()} className="bg-emerald-600 hover:bg-emerald-700">
+              <Button onClick={() => window.location.reload()} className="bg-blue-600 hover:bg-blue-700">
                 <RefreshCw className="w-4 h-4 mr-2" />
                 Refresh Page
               </Button>
