@@ -1,27 +1,24 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { GraduationCap, Award, MapPin } from "lucide-react"
+import { GraduationCap, Award, MapPin, Sparkles } from "lucide-react"
 import { personalInfo, achievements } from "@/data/personal-info"
 
 /**
- * About section component displaying education and achievements
- * Uses data from personal-info.ts for easy updates
+ * About section component displaying education, achievements, and core competencies
  */
 export default function About() {
-  // Sample coursework - you can move this to data file too if needed
   const relevantFields = [
-    "Software Development",
-    "System Architecture",
-    "System Design",
-    "System Analysis",
-    "Software Development Life Cycle (SDLC)",
-    "Web Development",
-    "Backend and Frontend Development (Fullstack)",
-    "Mobile App Development",
-    "Prototyping",
-    "Data Analysis",
+    "Full-Stack Web Development",
+    "Enterprise Architecture (Spring Boot & Angular)",
+    "Data Migration & ETL (Pentaho, PostgreSQL)",
+    "Database Engineering & SQL",
+    "System Design & SDLC",
+    "Artificial Intelligence & LLMs",
+    "Object-Oriented Programming (Java, C++)",
+    "Python Automation & Computer Vision",
+    "RESTful API & Microservices",
     "Software Quality Assurance",
-    "Artificial Intelligence",
-    "Machine Learning",
+    "Agile Sprint Workflows (Git, Jira)",
+    "Docker & Containerization",
   ]
 
   return (
@@ -31,26 +28,30 @@ export default function About() {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">About Me</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            A dedicated Software Engineering student with a passion for creating innovative solutions and a strong
-            academic foundation in computer science.
+            Software Engineering graduate with hands-on enterprise development and data migration experience, solid
+            foundations in modern web frameworks, and consistent academic excellence.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Education & Achievements */}
           <div>
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6">Education & Achievements</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-6">Education &amp; Honors</h3>
             <div className="space-y-6">
               {/* Education Card */}
-              <Card className="border-l-4 border-l-blue-500">
+              <Card className="border-l-4 border-l-blue-500 shadow-sm">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
-                    <GraduationCap className="w-6 h-6 text-blue-600 mt-1" />
+                    <GraduationCap className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-900">{personalInfo.degree}</h4>
-                      <p className="text-gray-600">{personalInfo.university}</p>
-                      <p className="text-sm text-gray-500">2022 - Present | CGPA: {personalInfo.gpa}</p>
-                      <p className="text-sm text-gray-500">Currently: {personalInfo.currentYear}</p>
+                      <p className="text-gray-600 font-medium">{personalInfo.university}</p>
+                      <div className="mt-2.5">
+                        <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">
+                          <Sparkles className="w-3.5 h-3.5 mr-1.5" />
+                          CGPA: 3.76 (Dean's Award • First Class Honours)
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </CardContent>
@@ -58,15 +59,17 @@ export default function About() {
 
               {/* Achievements */}
               {achievements.map((achievement, index) => (
-                <Card key={index} className="border-l-4 border-l-teal-500">
+                <Card key={index} className="border-l-4 border-l-teal-500 shadow-sm">
                   <CardContent className="p-6">
                     <div className="flex items-start space-x-4">
-                      <Award className="w-6 h-6 text-teal-600 mt-1" />
+                      <Award className="w-6 h-6 text-teal-600 mt-1 flex-shrink-0" />
                       <div>
                         <h4 className="font-semibold text-gray-900">{achievement.title}</h4>
-                        <p className="text-gray-600">{achievement.description}</p>
-                        {achievement.score && <p className="text-gray-600">Score: {achievement.score}</p>}
-                        <p className="text-sm text-gray-500">{achievement.year}</p>
+                        <p className="text-gray-600 text-sm mt-1">{achievement.description}</p>
+                        {achievement.score && (
+                          <p className="text-sm font-medium text-teal-700 mt-1">Score: {achievement.score}</p>
+                        )}
+                        {achievement.year && <p className="text-xs text-gray-400 mt-1">{achievement.year}</p>}
                       </div>
                     </div>
                   </CardContent>
@@ -74,14 +77,16 @@ export default function About() {
               ))}
 
               {/* Location Card */}
-              <Card className="border-l-4 border-l-cyan-500">
+              <Card className="border-l-4 border-l-cyan-500 shadow-sm">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
-                    <MapPin className="w-6 h-6 text-cyan-600 mt-1" />
+                    <MapPin className="w-6 h-6 text-cyan-600 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-900">Location</h4>
-                      <p className="text-gray-600">{personalInfo.location}</p>
-                      <p className="text-sm text-gray-500">Open to Relocation all Over Malaysia</p>
+                      <p className="text-gray-700 font-medium">{personalInfo.location}</p>
+                      <p className="text-xs text-gray-500 mt-1">
+                        Available for Software Engineer &amp; Junior Developer roles in the UAE
+                      </p>
                     </div>
                   </div>
                 </CardContent>
@@ -89,13 +94,16 @@ export default function About() {
             </div>
           </div>
 
-          {/* Filed of Interest */}
+          {/* Core Technical Competencies & Languages */}
           <div>
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6">Field of Interest</h3>
-            <div className="grid grid-cols-2 gap-4">
-              {relevantFields.map((course, index) => (
-                <div key={index} className="bg-white p-3 rounded-lg shadow-sm border hover:shadow-md transition-shadow">
-                  <p className="text-sm font-medium text-gray-700">{course}</p>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-6">Core Competencies</h3>
+            <div className="grid grid-cols-2 gap-3">
+              {relevantFields.map((field, index) => (
+                <div
+                  key={index}
+                  className="bg-white p-3 rounded-lg shadow-sm border border-slate-200 hover:shadow-md transition-shadow"
+                >
+                  <p className="text-xs font-semibold text-gray-800">{field}</p>
                 </div>
               ))}
             </div>
@@ -103,14 +111,16 @@ export default function About() {
             {/* Languages */}
             <div className="mt-8">
               <h4 className="text-lg font-semibold text-gray-900 mb-4">Languages</h4>
-              <div className="space-y-2">
+              <div className="grid grid-cols-2 gap-3">
                 {personalInfo.languages.map((lang, index) => (
                   <div
                     key={index}
-                    className="flex justify-between items-center bg-white p-3 rounded-lg shadow-sm border"
+                    className="flex justify-between items-center bg-white p-3.5 rounded-lg shadow-sm border border-slate-200"
                   >
-                    <span className="font-medium text-gray-700">{lang.language}</span>
-                    <span className="text-sm text-gray-500">{lang.proficiency}</span>
+                    <span className="font-semibold text-sm text-gray-800">{lang.language}</span>
+                    <span className="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-0.5 rounded">
+                      {lang.proficiency}
+                    </span>
                   </div>
                 ))}
               </div>

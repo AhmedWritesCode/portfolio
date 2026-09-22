@@ -1,10 +1,9 @@
 /**
  * Skills data structure
- * To add new skills or categories, simply modify this file
- * Icons are from Lucide React - you can change them easily
+ * Centralized and structured according to technical competencies
  */
 
-import { Code, Database, Globe, Smartphone, Server, PenToolIcon as Tool } from "lucide-react"
+import { Code, Database, Globe, Cpu, Server, PenToolIcon as Tool } from "lucide-react"
 
 export interface SkillCategory {
   id: string
@@ -12,125 +11,119 @@ export interface SkillCategory {
   icon: any // Lucide React icon component
   skills: string[]
   color: "emerald" | "teal" | "cyan" | "purple" | "orange" | "rose"
-  description?: string // Optional description for the category
+  description?: string
 }
 
 export const skillCategories: SkillCategory[] = [
   {
-    id: "programming",
-    title: "Programming Languages",
-    icon: Code,
-    skills: ["Java", "Python", "C++", "JavaScript", "PHP", "Dart", "JavaScript", "HTML", "CSS", "SQL"],
-    color: "emerald",
-    description: "Core programming languages and Basic Web Technologies",
-  },
-  {
     id: "frameworks",
     title: "Frameworks & Libraries",
     icon: Globe,
-    skills: ["FastAPI", "Next.js", "Vue.js", "Express.js", "Flutter", "Tailwind CSS", "Node.js", "PHP Slim"],
+    skills: [
+      "Spring Boot",
+      "Angular",
+      "Django",
+      "Vue.js",
+      "Next.js",
+      "Express.js",
+      "Node.js",
+      "FastAPI",
+      "Tailwind CSS",
+    ],
     color: "teal",
-    description: "Modern frameworks for efficient development",
+    description: "Enterprise and modern full-stack web frameworks",
+  },
+  {
+    id: "programming",
+    title: "Programming Languages",
+    icon: Code,
+    skills: ["Java", "Python", "TypeScript", "JavaScript", "C++", "SQL", "PHP", "Dart", "HTML5 / CSS3"],
+    color: "emerald",
+    description: "Core languages for backend, frontend, and systems",
   },
   {
     id: "databases",
-    title: "Databases",
+    title: "Data, Databases & ETL",
     icon: Database,
-    skills: ["MySQL", "Firebase", "SQLAlchemy"],
-    color: "cyan",
-    description: "Database design and management systems",
-  },
-  {
-    id: "mobile",
-    title: "Mobile Development",
-    icon: Smartphone,
     skills: [
-      "Flutter",
-      "Firebase Integration",
-      "Responsive Design",
+      "PostgreSQL",
+      "Supabase",
+      "Pentaho Data Integration",
+      "MySQL",
+      "ETL Pipelines",
+      "DBeaver Enterprise",
+      "Firebase",
+      "Cloud Storage (Buckets)",
     ],
-    color: "purple",
-    description: "Mobile application development",
-  },
-  {
-    id: "backend",
-    title: "Backend & APIs",
-    icon: Server,
-    skills: ["RESTful APIs", "Server-side Development", "Authentication", "Microservices"],
-    color: "orange",
-    description: "Backend development and API design",
-  },
-  {
-    id: "tools",
-    title: "Tools & Technologies",
-    icon: Tool,
-    skills: ["Git", "VS Code", "Figma", "Chrome DevTools", "Postman", "Vercel"],
-    color: "rose",
-    description: "Development tools and productivity software",
-  },
-  // Easy to add new categories:
-  /*
-  {
-    id: "security",
-    title: "Cybersecurity",
-    icon: Shield,
-    skills: ["Network Security", "Penetration Testing", "Secure Coding", "Vulnerability Assessment"],
-    color: "emerald",
-    description: "Security-focused development practices"
+    color: "cyan",
+    description: "Relational database design, data lakes, and ETL workflows",
   },
   {
     id: "ai",
-    title: "AI & Machine Learning",
-    icon: Brain,
-    skills: ["Machine Learning", "Natural Language Processing", "TensorFlow", "Data Analysis"],
-    color: "teal",
-    description: "Artificial intelligence and data science"
+    title: "AI & Intelligent Systems",
+    icon: Cpu,
+    skills: [
+      "Gemini AI",
+      "Claude / Antigravity",
+      "Prompt Engineering",
+      "LLM Integration",
+      "OpenCV",
+      "NumPy",
+      "Computer Vision",
+    ],
+    color: "purple",
+    description: "Generative AI, LLM tooling, and computer vision",
   },
   {
-    id: "cloud",
-    title: "Cloud & DevOps",
-    icon: Cloud,
-    skills: ["AWS", "Azure", "Docker", "Kubernetes", "CI/CD"],
-    color: "cyan",
-    description: "Cloud computing and deployment"
-  }
-  */
+    id: "backend",
+    title: "Architecture & Backend",
+    icon: Server,
+    skills: [
+      "RESTful API Design",
+      "Enterprise Multi-Tenant Architecture",
+      "Spring Security / JWT",
+      "Micro-frontends (Applets)",
+      "Change Data Capture (CDC)",
+      "Server-side Development",
+    ],
+    color: "orange",
+    description: "Robust scalable backend services and system architecture",
+  },
+  {
+    id: "tools",
+    title: "DevOps, Tools & Workflow",
+    icon: Tool,
+    skills: [
+      "Git / GitHub",
+      "Docker Containerization",
+      "Jira (Agile / Sprint Tracking)",
+      "Postman",
+      "Linux / Windows Server",
+      "CI/CD Workflows",
+      "Vercel",
+      "IntelliJ IDEA",
+    ],
+    color: "rose",
+    description: "Version control, sprint management, and deployment",
+  },
 ]
 
 /**
- * courses - easily expandable
- * Add new courses by simply adding strings to this array
+ * Key Academic Coursework
  */
 export const areasOfInterest: string[] = [
-  "WEB PROGRAMMING",
-  "TECHNOLOGY AND INFORMATION SYSTEM",
-  "SYSTEM ANALYSIS AND DESIGN",
-  "SOFTWARE ENGINEERING",
   "SOFTWARE DESIGN & ARCHITECTURE",
-  "REQUIREMENT ENGINEERING & SOFTWARE MODELING",
-  "PROGRAMMING TECHNIQUE I",
-  "PROGRAMMING TECHNIQUE II",
-  "PROBABILITY & STATISTICAL DATA ANALYSIS",
-  "OPERATING SYSTEMS",
-  "OBJECT OREINTED PROGRAMMING",
-  "NETWORK COMMUNICATION",
-  "INTERNET PROGRAMMING",
-  "INFORMATION AND COMMUNICATIONS TECHNOLOGY",
-  "HUMAN COMPUTER INTERACTION",
-  "DISCRETE STRUCTURE",
-  "DIGITAL LOGIC",
-  "DATABASE",
-  "DATA STRUCTURE AND ALGORITHM",
-  "WEB TECHNOLOGIES",
-  "COMPUTATIONAL MATHEMATICS",
-  "ARTIFICIAL INTELLIGENCE",
-  "APPLICATIONS DEVELOPMENT",
-  "MOBILE APPLICATION PROGRAMMING",
+  "ENTERPRISE APPLICATION DEVELOPMENT",
+  "SYSTEM ANALYSIS AND DESIGN",
+  "DATABASE SYSTEMS & SQL",
+  "SOFTWARE ENGINEERING PRINCIPLES",
+  "REQUIREMENTS ENGINEERING & MODELING",
+  "DATA STRUCTURES & ALGORITHMS",
+  "OBJECT-ORIENTED PROGRAMMING",
+  "WEB & INTERNET PROGRAMMING",
+  "ARTIFICIAL INTELLIGENCE & MACHINE LEARNING",
   "SOFTWARE QUALITY ASSURANCE",
-  "COMPUTATIONAL INTELLIGENCE",
-  "COMPUTER ORGANIZATION AND ARCHITECTURE",
-  "DATA ANALYTICS FOR ORGANIZATION"
-  // Add more courses here easily
+  "OPERATING SYSTEMS & NETWORKING",
 ]
 
 /**

@@ -1,266 +1,243 @@
 /**
  * Projects data structure
- * To add a new project, simply add a new object to this array
  * All fields are required for consistent display
  */
 
 export interface Project {
   id: string // Unique identifier for the project
   title: string // Project name
-  description: string // Brief description (2-3 sentences)
-  image: string // Image URL or placeholder
+  description: string // Brief description
+  image: string // Image URL from public/
   technologies: string[] // Array of technologies used
-  features: string[] // Key features/achievements (3-5 items)
+  features: string[] // Key features/achievements
   year: string // Year completed
-  type: string // Project type (Mobile App, Web App, etc.)
-  category: string // Category for filtering
+  type: string // Project type (Web Application, Mobile App, etc.)
+  category: "Web" | "AI" | "Game Development" // Main category for clean filtering
   githubUrl?: string // Optional GitHub repository URL
   liveUrl?: string // Optional live demo URL
   isUniversity?: boolean // Whether it's a university project
 }
 
 export const projects: Project[] = [
-  
-  // {
-  //   id: "fullstack-web",
-  //   title: "Full-Stack Web Application",
-  //   description:
-  //     "A complete web application with modern frontend, robust backend API, and secure database integration. Features role-based access control and comprehensive admin dashboard.",
-  //   image: "/placeholder.svg?height=300&width=500",
-  //   technologies: ["Next.js", "Express.js", "MongoDB", "RESTful API", "JWT", "Tailwind CSS"],
-  //   features: [
-  //     "Responsive React-based frontend with modern UI",
-  //     "RESTful API with Express.js and middleware",
-  //     "MongoDB database with optimized queries",
-  //     "JWT-based authentication and authorization",
-  //     "Admin dashboard with analytics and user management",
-  //   ],
-  //   year: "2024",
-  //   type: "Web Application",
-  //   category: "Full-Stack",
-  //   isUniversity: true,
-  // },
-  // {
-  //   id: "dynamic-website",
-  //   title: "Dynamic Website",
-  //   description:
-  //     "A responsive dynamic website with server-side functionality, form handling, and optimized performance across all devices. Built with vanilla technologies for maximum compatibility.",
-  //   image: "/placeholder.svg?height=300&width=500",
-  //   technologies: ["JavaScript", "PHP", "HTML5", "CSS3", "MySQL", "AJAX"],
-  //   features: [
-  //     "Server-side PHP functionality with session management",
-  //     "Responsive design implementation with CSS Grid",
-  //     "Form validation and secure data processing",
-  //     "Cross-browser compatibility testing",
-  //     "SEO optimization and performance tuning",
-  //   ],
-  //   year: "2024",
-  //   type: "Website",
-  //   category: "Frontend",
-  //   isUniversity: true,
-  // },
-  // Add more projects here easily by copying the structure above
-  // Example of a hobby project:
-  /*
   {
-    id: "personal-blog",
-    title: "Personal Tech Blog",
-    description: "A personal blog built with Next.js and MDX for writing about technology and programming experiences.",
-    image: "/placeholder.svg?height=300&width=500",
-    technologies: ["Next.js", "MDX", "Tailwind CSS", "Vercel"],
+    id: "deltaflow",
+    title: "DeltaFlow - AI Financial Management System",
+    description:
+      "Web-based financial management platform with Spring Boot backend, Angular frontend, and Gemini AI assistance for smart financial insights and receipt transaction extraction.",
+    image: "/deltaflow.png",
+    technologies: ["Spring Boot", "Angular", "Tailwind CSS", "PostgreSQL", "Supabase", "Gemini AI"],
     features: [
-      "Static site generation for optimal performance",
-      "MDX support for rich content creation",
-      "SEO optimized with meta tags",
-      "Dark mode support"
+      "AI financial assistance and receipt-based transaction extraction powered by Gemini LLM",
+      "Robust REST API architecture built with Java Spring Boot and secure authentication",
+      "Dynamic, responsive Single Page Application developed with Angular and Tailwind CSS",
+      "Cloud database and storage hosted on Supabase (PostgreSQL) for scalable financial queries",
     ],
-    year: "2024",
-    type: "Website",
-    category: "Personal",
-    isUniversity: false
-  }
-  */
-
-  {
-    id: "Betalink",
-    title: "Academic Resource Sharing System",
-    description: "Web app for academic material sharing with UTM API integration",
-    image: "/Betalink.jpg?height=300&width=500",
-    technologies: ["Vue.js", "Express.js", "Node.js", "Tailwind CSS", "MySQL"],
-    features: [
-      "Authentication & Authorization",
-      "CRUD Operations",
-      "API Integration",
-      "Database Integration",
-      "Full-Stack Development",
-    ],
-    year: "2024",
-    type: "Website",
+    year: "2025",
+    type: "Web Application",
     category: "Web",
-    githubUrl: "https://github.com/AhmedWritesCode/Betalink",
-    isUniversity: true
+    liveUrl: "https://deltaflow-ai.vercel.app/",
+    isUniversity: false,
   },
-  
- 
+  {
+    id: "orotick",
+    title: "Orotick - Productivity & Focus Platform",
+    description:
+      "Comprehensive productivity ecosystem built with Django and Vanilla JavaScript for managing tasks, habits, Pomodoro focus sessions, and personal analytics.",
+    image: "/orotick.png",
+    technologies: ["Django", "Python", "JavaScript", "HTML5", "CSS3", "Chart.js"],
+    features: [
+      "Task and habit tracking with customizable Kanban workflow boards",
+      "Integrated Pomodoro timer for deep focus and session tracking",
+      "Personal productivity analytics and visualization dashboards using Chart.js",
+      "Secure user authentication and server-rendered architecture with Django",
+    ],
+    year: "2025",
+    type: "Web Application",
+    category: "Web",
+    liveUrl: "https://www.orotick.tech/",
+    isUniversity: false,
+  },
   {
     id: "timetable",
     title: "Faculty of Computing Timetable Website",
-    description: "A timetable viewing platform built for UTM's Faculty of Computing with API Integeration.",
-    image: "/fsksm.png?height=300&width=500",
-    technologies: ["HTML", "CSS", "JavaScript"],
+    description:
+      "Official timetable viewing and schedule comparison platform built for UTM's Faculty of Computing with direct API integration.",
+    image: "/fsksm.png",
+    technologies: ["JavaScript", "HTML5", "CSS3", "UTM API"],
     features: [
-      "Authentication & Authorization",
-      "API Integration",
-      "Problem Solving with Core Technologies",
+      "Real-time course schedule search, student profile parsing, and timetable comparisons",
+      "Seamless integration with UTM's institutional API",
+      "Lightweight, responsive frontend built with core web technologies",
     ],
     year: "2025",
     type: "Website",
     category: "Web",
     githubUrl: "https://github.com/AhmedWritesCode/FSKSM",
-    isUniversity: false
+    isUniversity: false,
   },
-
+  {
+    id: "betalink",
+    title: "Academic Resource Sharing System",
+    description:
+      "Full-stack web application for sharing academic materials among university students, featuring UTM API authentication.",
+    image: "/Betalink.jpg",
+    technologies: ["Vue.js", "Express.js", "Node.js", "Tailwind CSS", "MySQL"],
+    features: [
+      "Authentication & Authorization integrated with UTM official API",
+      "Complete CRUD operations for academic materials and course past papers",
+      "Full-stack architecture with Express REST API and MySQL relational database",
+    ],
+    year: "2024",
+    type: "Web Application",
+    category: "Web",
+    githubUrl: "https://github.com/AhmedWritesCode/Betalink",
+    isUniversity: true,
+  },
   {
     id: "tvpss",
     title: "TVPSS Management Information System",
-    description: "Real World Project, Backend-focused prototype system for youth development organization.",
+    description:
+      "Enterprise backend prototype for a youth development organization managing school media activities and administrative records.",
     image: "/TVPSSJOHOR.png",
-    technologies: ["Jakarta Enterprise Edition (Java EE)", "Spring Framework", "JSP", "MySQL"],
+    technologies: ["Spring MVC", "Java EE", "JSP", "Hibernate ORM", "MySQL"],
     features: [
-      "Authentication & Authorization",
-      "Database Integeration (Hibernate ORM)",
-      "CRUD Operations",
-      "Enterprise Application Development",
+      "Enterprise application development using Spring Framework and Java EE",
+      "Database persistence and transaction management with Hibernate ORM",
+      "Administrative dashboard with role-based access control and CRUD operations",
     ],
     year: "2025",
-    type: "Website",
+    type: "Web Application",
     category: "Web",
-    githubUrl: "https://github.com/AhmedWritesCode/TVPSS-MIS", 
-    isUniversity: true
+    githubUrl: "https://github.com/AhmedWritesCode/TVPSS-MIS",
+    isUniversity: true,
   },
-
+  {
+    id: "rtse",
+    title: "Real Time Vehicle Control (Autonomous Driving)",
+    description:
+      "Python autonomous driving script utilizing OpenCV computer vision, NumPy, and multithreaded sockets to navigate in-game vehicle challenges automatically.",
+    image: "/rtse.png",
+    technologies: ["Python", "OpenCV", "NumPy", "Sockets", "Multithreading"],
+    features: [
+      "Real-time video feed analysis and obstacle detection using OpenCV and NumPy",
+      "Autonomous driving decision engine controlling throttle and steering inputs",
+      "Low-latency multithreaded socket communication for real-time telemetry",
+    ],
+    year: "2025",
+    type: "System / Automation",
+    category: "AI",
+    githubUrl: "https://github.com/AhmedWritesCode/RTSE_Phase_1_V1.0",
+    isUniversity: false,
+  },
   {
     id: "game",
-    title: "Simple OOP-based Game",
-    description: "C++ game exploring object-oriented design with legacy graphics.",
-    image: "/game.jpg?height=300&width=500", 
-    technologies: ["C++"],
+    title: "SpeedRush - OOP-Based Game",
+    description:
+      "C++ 2D game exploring object-oriented design principles and low-level game mechanics under strict hardware constraints.",
+    image: "/game.jpg",
+    technologies: ["C++", "OOP", "Graphics Library"],
     features: [
-      "C++ OOP concepts: inheritance, aggregation, composition, association",
-      "Legacy graphics using C++ libraries",
-      "Game mechanics with classes and objects",
-      "Basic game loop and event handling",
+      "Application of C++ OOP concepts: inheritance, composition, and association",
+      "Custom 2D game loop, collision physics, and keyboard event handling",
+      "Memory-efficient architecture using core C++ under legacy constraints",
     ],
     year: "2023",
     type: "Game",
     category: "Game Development",
-    githubUrl: "https://github.com/AhmedWritesCode/SpeedRush", 
-    isUniversity: false
-  },
-  {
-    id: "bitewise",
-    title: "BiteWise - Mobile App",
-    description:
-      "A mobile application designed to help users monitor daily caloric intake, understand nutritional habits, and achieve personal health goals.",
-    image: "/bitewise.jpg?height=200&width=300",
-    technologies: ["Flutter", "Firebase", "Dart", "AI", "LLM (Gemini)"],
-    features: [
-      "AI Food Scanning with Gemini LLM",
-      "Health metrics tracking and analytics",
-      "Authentication",
-      "CRUD Operations",
-      "Firebase integration",
-      "User-friendly interface with Flutter",
-      "Group Project",
-    ],
-    year: "2025",
-    type: "Mobile Application",
-    category: "Mobile App",
-    githubUrl: "https://github.com/SECJ3623-MAP-24252/map-group-project-descent",
-    isUniversity: true,
-  },
-
-  {
-    id: "deepseek",
-    title: "DeepseekR1 Chatbot Webapp",
-    description:
-      "A Simple Chatbot that utilizes DeepseekR1 and Qwen VL LLMs.",
-    image: "/deepseek.jpg?height=300&width=500",
-    technologies: ["Deepseek R1", "Qwen VL", "JavaScript", "HTML", "CSS"],
-    features: [
-      "Deepseek R1 and Qwen VL integration for natural language processing",
-      "User-friendly chat interface",
-      "Real-time responses",
-      "Memory and Image Handling",
-    ],
-    year: "2025",
-    type: "Website",
-    category: "AI",
-    githubUrl: "https://github.com/AhmedWritesCode/DeepSeekR1Chatbot",
-    liveUrl: "https://ahmedwritescode.github.io/DeepSeekR1Chatbot/", 
+    githubUrl: "https://github.com/AhmedWritesCode/SpeedRush",
     isUniversity: false,
   },
   {
     id: "recipe",
     title: "Recipe Management System",
     description:
-      "Simple CRUD web app for managing recipes.",
-    image: "/recipe.jpg?height=200&width=300",
-    technologies: ["JavaScript", "PHP", "MySQL", "HTML", "CSS"],
+      "Web application for creating, organizing, and discovering culinary recipes with user accounts and search filtering.",
+    image: "/recipe.jpg",
+    technologies: ["PHP", "MySQL", "JavaScript", "HTML5", "CSS3"],
     features: [
-      "User-friendly interface for recipe management",
-      "CRUD operations for recipes",
-      "Search and filter functionality",
-      "Authentication and Authorization",
-      "Database Integeration",
+      "Full CRUD functionality for recipe authoring, categorization, and editing",
+      "Recipe search, tag filtering, and user favorites collection",
+      "Secure database transactions and user session management with PHP & MySQL",
     ],
     year: "2025",
     type: "Web Application",
     category: "Web",
     githubUrl: "https://github.com/AhmedWritesCode/Recipe-MIS",
-    isUniversity: false
+    isUniversity: false,
   },
-
+  {
+    id: "portfolio",
+    title: "Developer Portfolio & AI Assistant",
+    description:
+      "Modern developer portfolio featuring dynamic project showcases, enterprise experience highlights, and an integrated VectorShift AI chatbot.",
+    image: "/portfolio-preview.png",
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "VectorShift AI"],
+    features: [
+      "Interactive and fully responsive design built with Next.js and Tailwind CSS",
+      "Integrated VectorShift AI assistant providing interactive inquiries on skills and projects",
+      "Interactive project filtering and direct message form communication",
+    ],
+    year: "2025",
+    type: "Web Application",
+    category: "Web",
+    liveUrl: "https://portfolio-roan-nine-90.vercel.app/",
+    isUniversity: false,
+  },
+  {
+    id: "deepseek",
+    title: "DeepSeek-R1 Chatbot Web App",
+    description:
+      "Interactive AI chatbot web application leveraging DeepSeek-R1 and Qwen-VL models for conversational intelligence and visual understanding.",
+    image: "/deepseek.jpg",
+    technologies: ["DeepSeek R1", "Qwen VL", "JavaScript", "HTML5", "CSS3", "AI"],
+    features: [
+      "DeepSeek-R1 & Qwen-VL model integration for natural language processing",
+      "Real-time conversational streaming responses with context memory",
+      "Multimodal image and visual query handling",
+      "Lightweight and responsive chat interface",
+    ],
+    year: "2025",
+    type: "Web Application",
+    category: "AI",
+    githubUrl: "https://github.com/AhmedWritesCode/DeepSeekR1Chatbot",
+    liveUrl: "https://ahmedwritescode.github.io/DeepSeekR1Chatbot/",
+    isUniversity: false,
+  },
   {
     id: "finpy",
     title: "Simple Finance Manager",
     description:
-      "Personal finance tracker built in Python..",
+      "Personal finance tracking and expense analysis utility built with Python and Pandas for budgeting and financial reporting.",
     image: "/python.png",
-    technologies: ["Python", "Pandas"],
+    technologies: ["Python", "Pandas", "Data Analytics"],
     features: [
-      "Track income and expenses",
-      "Generate financial reports",
-      "Data visualization with Pandas",
-      "Simple command-line interface",
+      "Track and categorize personal income and expense streams",
+      "Automated summary metrics and financial statement generation",
+      "Data processing and analytics visualization using Pandas",
     ],
     year: "2025",
-    type: "Web Application",
-    category: "System",
+    type: "System / Utility",
+    category: "Web",
     githubUrl: "https://github.com/AhmedWritesCode/SimpleFinanceManager",
-    isUniversity: false
+    isUniversity: false,
   },
-
 ]
 
 /**
- * Helper function to get projects by category
- * Useful for filtering functionality
+ * Main categories for primary filtering
  */
-export const getProjectsByCategory = (category: string): Project[] => {
-  return projects.filter((project) => project.category.toLowerCase() === category.toLowerCase())
-}
+export const mainCategories = ["All", "Web", "AI", "Game Development"] as const
 
 /**
- * Helper function to get university vs personal projects
+ * Key technologies for tech-based filtering
  */
-export const getProjectsByType = (isUniversity: boolean): Project[] => {
-  return projects.filter((project) => project.isUniversity === isUniversity)
-}
-
-/**
- * Get all unique categories for filtering
- */
-export const getProjectCategories = (): string[] => {
-  return [...new Set(projects.map((project) => project.category))]
-}
+export const popularTechFilters = [
+  "Spring Boot",
+  "Angular",
+  "Django",
+  "Python",
+  "Vue.js",
+  "C++",
+  "PHP",
+  "Next.js",
+] as const
