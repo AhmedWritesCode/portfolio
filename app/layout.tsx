@@ -5,22 +5,23 @@ import "./globals.css"
 import Script from "next/script"
 import emailjs from '@emailjs/browser'
 
-// Initialize EmailJS with your public key
+// Initialize EmailJS with public key
 if (typeof window !== 'undefined') {
-  emailjs.init("49m0KayoEPyBegiCn")
+  emailjs.init("bwy1mj-s0DNItrXYp")
 }
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Ahmed Zaki Al-Gabaly - Portfolio",
+  title: "Ahmed Zaki - Software Engineer | Full-Stack Developer",
   description:
-    "Portfolio of Ahmed Zaki Al-Gabaly, a Software Engineering Student at UTM with expertise in full-stack development, Artificial Intelligence, Machine Learning, Mobile applications, and Modern web technologies.",
-  keywords: "software engineering, web development, python, java, JavaScript, HTML, CSS, C++, PHP, PHP Slim, mobile development, Next.js, Flutter, FastAPI, portfolio, internship, Vue.js, AI, Machine Learning, TensorFlow",
-  authors: [{ name: "Ahmed Zaki Al-Gabaly" }],
+    "Portfolio of Ahmed Zaki, Software Engineer based in the United Arab Emirates. Experienced in Full-Stack Development (Spring Boot, Angular, Django), PostgreSQL Data Pipelines, and AI Integration.",
+  keywords:
+    "software engineer, full-stack developer, spring boot, angular, django, python, java, postgresql, pentaho, uae, united arab emirates, next.js, gemini ai, developer portfolio",
+  authors: [{ name: "Ahmed Zaki" }],
   openGraph: {
-    title: "Ahmed Zaki Al-Gabaly - Portfolio",
-    description: "Get to know more about my experience and skills",
+    title: "Ahmed Zaki - Software Engineer Portfolio",
+    description: "Full-Stack Enterprise Development, Data Pipelines, and Intelligent Applications.",
     type: "website",
   },
 }

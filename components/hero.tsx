@@ -1,14 +1,14 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ArrowDown, Github, Linkedin, Mail, Phone, Download } from "lucide-react"
+import { ArrowDown, Github, Linkedin, Download } from "lucide-react"
 import Link from "next/link"
 import { personalInfo } from "@/data/personal-info"
 import { trackResumeDownload } from "@/lib/analytics"
 
 /**
- * Hero section component - the first impression of the portfolio
- * Uses data from personal-info.ts for easy updates
+ * Hero section component - clean and modern first impression
+ * Uses data from personal-info.ts
  */
 export default function Hero() {
   return (
@@ -24,11 +24,10 @@ export default function Hero() {
         {/* Name and Title */}
         <div className="mb-8">
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-4">
-            {personalInfo.name.split(" ")[0]}{" "}
-            <span className="text-blue-600">{personalInfo.name.split(" ")[1]}</span>
+            Ahmed <span className="text-blue-600">Zaki</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-6">{personalInfo.title}</p>
-          <p className="text-lg text-gray-500 max-w-2xl mx-auto mb-8">{personalInfo.summary}</p>
+          <p className="text-lg text-gray-500 max-w-2xl mx-auto mb-8 leading-relaxed">{personalInfo.summary}</p>
         </div>
 
         {/* Call to Action Buttons */}
@@ -39,34 +38,24 @@ export default function Hero() {
           <Button asChild variant="outline" size="lg">
             <Link href="#contact">Get In Touch</Link>
           </Button>
-          {/* Resume Download Button - Add your resume file to public folder */}
+          {/* Resume Download Button */}
           <Button asChild variant="outline" size="lg">
-            <a href="/AHMED_ZAKI_AL-GABALY_CV.pdf" download="AHMED_ZAKI_AL-GABALY_CV.pdf" onClick={trackResumeDownload}>
+            <a
+              href={personalInfo.resumePath}
+              download="Ahmed_Zaki_Al-Gabaly_CV.pdf"
+              onClick={trackResumeDownload}
+            >
               <Download className="w-4 h-4 mr-2" />
               Download Resume
             </a>
           </Button>
         </div>
 
-        {/* Social Media Links */}
+        {/* Social Media Links (Clean Minimal Icons) */}
         <div className="flex justify-center space-x-6">
           <Link
-            href={`mailto:${personalInfo.email}`}
-            className="text-gray-600 hover:text-blue-600 transition-colors"
-            aria-label="Send email"
-          >
-            <Mail className="w-6 h-6" />
-          </Link>
-          <Link
-            href={`tel:${personalInfo.phone}`}
-            className="text-gray-600 hover:text-blue-600 transition-colors"
-            aria-label="Call phone number"
-          >
-            <Phone className="w-6 h-6" />
-          </Link>
-          <Link
             href={personalInfo.linkedin}
-            className="text-gray-600 hover:text-blue-600 transition-colors"
+            className="text-gray-600 hover:text-blue-600 transition-colors p-2 rounded-lg hover:bg-white/50"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn profile"
@@ -75,7 +64,7 @@ export default function Hero() {
           </Link>
           <Link
             href={personalInfo.github}
-            className="text-gray-600 hover:text-blue-600 transition-colors"
+            className="text-gray-600 hover:text-blue-600 transition-colors p-2 rounded-lg hover:bg-white/50"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub profile"
