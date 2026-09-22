@@ -13,15 +13,20 @@ if (typeof window !== 'undefined') {
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Ahmed Zaki - Software Engineer | Full-Stack Developer",
+  title: "Ahmed Zaki | Portfolio",
   description:
-    "Portfolio of Ahmed Zaki, Software Engineer based in the United Arab Emirates. Experienced in Full-Stack Development (Spring Boot, Angular, Django), PostgreSQL Data Pipelines, and AI Integration.",
+    "Portfolio of Ahmed Zaki, Software Engineer based in the United Arab Emirates. Experienced in Full-Stack Development, PostgreSQL Data Pipelines, and AI Integration.",
   keywords:
-    "software engineer, full-stack developer, spring boot, angular, django, python, java, postgresql, pentaho, uae, united arab emirates, next.js, gemini ai, developer portfolio",
+    "software engineer, full-stack developer, spring boot, angular, django, python, java, postgresql, uae, united arab emirates, portfolio",
   authors: [{ name: "Ahmed Zaki" }],
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
   openGraph: {
-    title: "Ahmed Zaki - Software Engineer Portfolio",
-    description: "Full-Stack Enterprise Development, Data Pipelines, and Intelligent Applications.",
+    title: "Ahmed Zaki | Portfolio",
+    description: "Software Engineering, Full-Stack Development & Intelligent Systems",
     type: "website",
   },
 }

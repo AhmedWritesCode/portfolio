@@ -183,6 +183,44 @@ export const projects: Project[] = [
     liveUrl: "https://portfolio-roan-nine-90.vercel.app/",
     isUniversity: false,
   },
+  {
+    id: "deepseek",
+    title: "DeepSeek-R1 Chatbot Web App",
+    description:
+      "Interactive AI chatbot web application leveraging DeepSeek-R1 and Qwen-VL models for conversational intelligence and visual understanding.",
+    image: "/deepseek.jpg",
+    technologies: ["DeepSeek R1", "Qwen VL", "JavaScript", "HTML5", "CSS3", "AI"],
+    features: [
+      "DeepSeek-R1 & Qwen-VL model integration for natural language processing",
+      "Real-time conversational streaming responses with context memory",
+      "Multimodal image and visual query handling",
+      "Lightweight and responsive chat interface",
+    ],
+    year: "2025",
+    type: "Web Application",
+    category: "AI",
+    githubUrl: "https://github.com/AhmedWritesCode/DeepSeekR1Chatbot",
+    liveUrl: "https://ahmedwritescode.github.io/DeepSeekR1Chatbot/",
+    isUniversity: false,
+  },
+  {
+    id: "finpy",
+    title: "Simple Finance Manager",
+    description:
+      "Personal finance tracking and expense analysis utility built with Python and Pandas for budgeting and financial reporting.",
+    image: "/python.png",
+    technologies: ["Python", "Pandas", "Data Analytics"],
+    features: [
+      "Track and categorize personal income and expense streams",
+      "Automated summary metrics and financial statement generation",
+      "Data processing and analytics visualization using Pandas",
+    ],
+    year: "2025",
+    type: "System / Utility",
+    category: "Web",
+    githubUrl: "https://github.com/AhmedWritesCode/SimpleFinanceManager",
+    isUniversity: false,
+  },
 ]
 
 /**

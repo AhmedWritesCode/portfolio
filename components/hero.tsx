@@ -42,7 +42,7 @@ export default function Hero() {
           <Button asChild variant="outline" size="lg">
             <a
               href={personalInfo.resumePath}
-              download="Ahmed_Zaki_Al-Gabaly_CV.pdf"
+              download="Ahmed_Zaki_CV.pdf"
               onClick={trackResumeDownload}
             >
               <Download className="w-4 h-4 mr-2" />

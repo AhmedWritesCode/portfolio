@@ -11,7 +11,7 @@ export const personalInfo = {
 
   // Contact Information
   location: "United Arab Emirates",
-  resumePath: "/Curriculum Vitae & Projects - Ahmed Zaki Al-Gabaly.pdf",
+  resumePath: "/Ahmed Zaki - CV.pdf",
 
   // Social Media Links
   linkedin: "https://www.linkedin.com/in/ahmed-zaki-al-gabaly-14aa19262/",
